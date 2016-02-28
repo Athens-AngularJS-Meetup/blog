@@ -9,7 +9,7 @@ angular
                     }
                 },
                 template: '<posts posts="$resolve.posts"></posts>',
-                title: 'Posts'
+                title: 'Posts List'
             })
             .when('/posts/:postID', {
                 resolve: {
