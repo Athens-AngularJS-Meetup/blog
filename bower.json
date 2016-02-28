@@ -1,0 +1,25 @@
+{
+  "name": "blog",
+  "authors": [
+    "Marios Fakiolas <m.fakiolas@hotmail.gr>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.0",
+    "angular-route": "^1.5.0",
+    "font-awesome": "^4.5.0",
+    "angular-messages": "^1.5.0"
+  }
+}

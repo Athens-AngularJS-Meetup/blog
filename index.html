@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <title ng-bind="title">Bloggie</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,100' rel='stylesheet' type='text/css'>
+        <link href="bower_components/font-awesome/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+        <link href="assets/css/myApp.css" rel='stylesheet' type='text/css'>
+    </head>
+    <body ng-cloak>
+        <header>
+            <div class="container">
+                <a href="#/" class="logo">Bloggie</a>
+                <social-icons></social-icons>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <ng-view></ng-view>
+            </div>
+        </main>
+
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+
+        <script src="app/modules.js"></script>
+        <script src="app/routes.js"></script>
+
+        <script src="app/components/posts.js"></script>
+        <script src="app/components/post-item.js"></script>
+        <script src="app/components/post.js"></script>
+        <script src="app/components/social-icons.js"></script>
+        <script src="app/components/contact.js"></script>
+
+        <script src="app/services/post.js"></script>
+        <script src="app/directives.js"></script>
+    </body>
+</html>

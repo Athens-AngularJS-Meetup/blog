@@ -1,0 +1,219 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.4rem;
+    color: #444;
+    background: url(../images/bg.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.card {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+}
+.card-body {
+    padding: 15px;
+}
+
+/* Header */
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    text-align: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header .container {
+    position: relative;
+}
+main {
+    padding: 100px 0 0;
+}
+
+/* Social Icons */
+
+.social-icons {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+.social-icons li {
+    display: inline-block;
+}
+.social-icons li + li {
+    margin-left: 20px;
+}
+.social-icons a {
+    color: #777;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.social-icons a:hover {
+    color: #444;
+}
+@media screen and (max-width: 600px) {
+    header {
+        height: 100px;
+    }
+    header .container {
+        position: static;
+    }
+    main {
+        padding-top: 120px;
+    }
+    .social-icons {
+        top: inherit;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background-color: #f2f2f2;
+    }
+}
+
+/* Logo */
+
+.logo {
+    text-decoration: none;
+    color: #444;
+    font-size: 30px;
+    line-height: 80px;
+    text-shadow: 2px 2px 0 #d4d4d4;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-style: italic;
+    position: relative;
+}
+.logo:after, .logo:before {
+    position: absolute;
+    content: '';
+}
+.logo:before {
+    bottom: 17px;
+    left: -60px;
+    width: 40px;
+    height: 1px;
+    background-color: #d4d4d4;
+}
+.logo:after {
+    bottom: 17px;
+    right: -60px;
+    width: 40px;
+    height: 1px;
+    background-color: #d4d4d4;
+}
+
+/* Posts */
+
+.post-item {
+    margin: 0 0 20px 0;
+}
+.post-item h4 {
+    font-weight: 400;
+    margin: 0 0 10px;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+}
+.post-item hr {
+    margin: 0 0 10px;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+}
+.post-item p {
+    font-weight: 300;
+    margin: 0 0 10px;
+    line-height: 1.5rem;
+}
+.post-item img {
+    border-radius: 2px 2px 0 0;
+    display: block;
+    width: 100%;
+}
+
+/* Forms */
+
+form .form-group + .form-group {
+    margin-top: 15px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #777;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    -webkit-transition: all ease-in-out .15s;
+    -o-transition: all ease-in-out .15s;
+    transition: all ease-in-out .15s;
+}
+textarea.form-control {
+    height: auto;
+}
+.form-control:focus {
+    outline: none;
+    border-color: #444;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #777;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: none;
+    -webkit-transition: all ease-in-out .15s;
+    -o-transition: all ease-in-out .15s;
+    transition: all ease-in-out .15s;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:hover {
+    background-color: #444;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.help-block {
+    margin-top: 5px;
+    color: #dd0000;
+    font-size: .8em;
+}

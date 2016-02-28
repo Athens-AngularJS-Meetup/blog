@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-body" ng-show="!$ctrl.messageSent">
+        <form name="contactForm" ng-submit="$ctrl.submit(contactForm.$valid)" novalidate>
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" name="name" ng-model="$ctrl.user.name" class="form-control" required/>
+                <div ng-messages="contactForm.name.$error" ng-if="contactForm.name.$dirty">
+                    <p class="help-block" ng-message="required">Please enter your name</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" ng-model="$ctrl.user.email" class="form-control" required/>
+                <div ng-messages="contactForm.email.$error" ng-if="contactForm.email.$dirty">
+                    <p class="help-block" ng-message="required">Please enter your email</p>
+                    <p class="help-block" ng-message="email">Please enter a valid email address</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea name="message" ng-model="$ctrl.user.message" class="form-control" rows="8" cols="40" required></textarea>
+                <div ng-messages="contactForm.message.$error" ng-if="contactForm.message.$dirty">
+                    <p class="help-block" ng-message="required">Please enter your message</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="card-body" ng-show="$ctrl.messageSent">
+        <p>Dear {{$ctrl.user.name}},<br><br>thank you so much for your message. I will get back to you the soonest possible!!!<br><br>Regards, Marios</p>
+    </div>
+</div>
