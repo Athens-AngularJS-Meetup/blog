@@ -10,9 +10,8 @@ cd blog
 
 Pull dependencies:
 ```shell
-npm install bower -g
+npm i -g bower http-server
 bower install
-npm install http-server -g
 ```
 
 Run a local server:
