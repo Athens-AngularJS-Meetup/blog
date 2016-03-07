@@ -4,18 +4,18 @@ angular
         $routeProvider
             .when('/', {
                 resolve: {
-                    posts: function(Post) {
+                    posts: ['Post', function(Post) {
                         return Post.all();
-                    }
+                    }]
                 },
                 template: '<posts posts="$resolve.posts"></posts>',
                 title: 'Posts List'
             })
             .when('/posts/:postID', {
                 resolve: {
-                    post: function(Post, $route) {
+                    post: ['Post', '$route', function(Post, $route) {
                         return Post.get($route.current.params.postID);
-                    }
+                    }]
                 },
                 template: '<post post="$resolve.post"></post>',
                 title: 'Single Post'

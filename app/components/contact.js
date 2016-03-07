@@ -2,7 +2,7 @@ angular
     .module('myApp')
     .component('contact', {
         templateUrl: 'app/templates/contact.html',
-        controller: function($scope, $element, $attrs) {
+        controller: function() {
             var self = this;
             self.messageSent = false;
             self.user = {
@@ -13,22 +13,22 @@ angular
             self.submit = function(isValid) {
                 if (isValid) {
                     self.messageSent = true;
-                    setPristineForm($scope);
+                    setPristineForm(self);
                 } else {
-                    setDirtyForm($scope);
+                    setDirtyForm(self);
                 }
             };
         }
     });
 
-    function setPristineForm($scope) {
-        $scope.contactForm.name.$setPristine();
-        $scope.contactForm.email.$setPristine();
-        $scope.contactForm.message.$setPristine();
+    function setPristineForm(self) {
+        self.contactForm.name.$setPristine();
+        self.contactForm.email.$setPristine();
+        self.contactForm.message.$setPristine();
     }
 
-    function setDirtyForm($scope) {
-        $scope.contactForm.name.$setDirty();
-        $scope.contactForm.email.$setDirty();
-        $scope.contactForm.message.$setDirty();
+    function setDirtyForm(self) {
+        self.contactForm.name.$setDirty();
+        self.contactForm.email.$setDirty();
+        self.contactForm.message.$setDirty();
     }

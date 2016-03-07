@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-body" ng-show="!$ctrl.messageSent">
-        <form name="contactForm" ng-submit="$ctrl.submit(contactForm.$valid)" novalidate>
+        <form name="$ctrl.contactForm" ng-submit="$ctrl.submit($ctrl.contactForm.$valid)" novalidate>
             <div class="form-group">
                 <label class="form-label">Name</label>
                 <input type="text" name="name" ng-model="$ctrl.user.name" class="form-control" required/>
-                <div ng-messages="contactForm.name.$error" ng-if="contactForm.name.$dirty">
+                <div ng-messages="$ctrl.contactForm.name.$error" ng-if="$ctrl.contactForm.name.$dirty">
                     <p class="help-block" ng-message="required">Please enter your name</p>
                 </div>
             </div>
@@ -12,7 +12,7 @@
             <div class="form-group">
                 <label class="form-label">Email</label>
                 <input type="email" name="email" ng-model="$ctrl.user.email" class="form-control" required/>
-                <div ng-messages="contactForm.email.$error" ng-if="contactForm.email.$dirty">
+                <div ng-messages="$ctrl.contactForm.email.$error" ng-if="$ctrl.contactForm.email.$dirty">
                     <p class="help-block" ng-message="required">Please enter your email</p>
                     <p class="help-block" ng-message="email">Please enter a valid email address</p>
                 </div>
@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label class="form-label">Message</label>
                 <textarea name="message" ng-model="$ctrl.user.message" class="form-control" rows="8" cols="40" required></textarea>
-                <div ng-messages="contactForm.message.$error" ng-if="contactForm.message.$dirty">
+                <div ng-messages="$ctrl.contactForm.message.$error" ng-if="$ctrl.contactForm.message.$dirty">
                     <p class="help-block" ng-message="required">Please enter your message</p>
                 </div>
             </div>

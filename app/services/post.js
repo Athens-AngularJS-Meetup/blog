@@ -13,6 +13,9 @@ angular
                 .get('http://jsonplaceholder.typicode.com/posts')
                 .then(function(data) {
                     return data.data;
+                })
+                .catch(function(err) {
+
                 });
         }
 
@@ -22,6 +25,9 @@ angular
                 .get('http://jsonplaceholder.typicode.com/posts/' + id)
                 .then(function(data) {
                     return data.data;
+                })
+                .catch(function(err) {
+
                 });
         }
     }]);
