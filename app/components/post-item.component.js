@@ -1,7 +1,7 @@
 angular
     .module('myApp')
-    .component('post', {
-        templateUrl: 'app/templates/post.html',
+    .component('postItem', {
+        templateUrl: 'app/templates/post-item.template.html',
         bindings: {
             post: '<'
         },

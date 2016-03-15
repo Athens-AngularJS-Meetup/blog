@@ -1,7 +1,7 @@
 angular
     .module('myApp')
     .component('posts', {
-        templateUrl: 'app/templates/posts.html',
+        templateUrl: 'app/templates/posts.template.html',
         bindings: {
             posts: '='
         },

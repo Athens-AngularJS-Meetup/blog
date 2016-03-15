@@ -10,13 +10,13 @@ cd blog
 
 Pull dependencies:
 ```shell
-npm i -g bower http-server
+npm i -g bower live-server
 bower install
 ```
 
 Run a local server:
 ```shell
-http-server
+live-server
 ```
 
 Check the app on: `http:127.0.0.1:8080`
